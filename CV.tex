@@ -1,0 +1,206 @@
+\documentclass[A4,11pt]{article}
+%\documentclass[letterpaper,11pt]{article} %For use in US
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+
+%-----FONT OPTIONS-------------------------------------------------------------
+
+
+% serif
+ \usepackage{palatino}
+% \usepackage{times} %This is the default as well
+% \usepackage{charter}
+
+% sans-serif
+% \usepackage{helvet}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+%-----PAGE SETUP---------------------------------------------------------------
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-1cm}
+\addtolength{\textheight}{2cm}
+
+% Margins for US Letter size
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that .pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
+\newcommand{\CVItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \text{\small#1} & \text{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Uncomment for US
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%------------------------------------------------------------------------------
+% CV STARTS HERE  %
+%------------------------------------------------------------------------------
+\begin{document}
+
+%-----HEADING------------------------------------------------------------------
+\begin{figure}[h]
+\begin{minipage}[c]{0.2\textwidth}
+\includegraphics[width = 0.5\textwidth]{portrait}
+\end{minipage}
+\begin{minipage}[c]{0.7\textwidth}
+    \centerline{\textbf{\Huge Junhe.Chen}} 
+    \vspace{20pt} 
+    
+    \centerline{No. 8 Yannan Fifth Road, Yanta, Xi'an, Shaanxi Province, China}
+    
+    \centerline{15501696238 $\mid$ 963200082@qq.com}
+\end{minipage}
+\end{figure}
+
+%-----Education Experience----------------------------------------------------------------
+\section{Education Experience}
+  \CVSubHeadingListStart
+    \CVSubheading
+      {Xian-Jiaotong Liverpool University/Liverpool University}{\textbf{Suzhou}}
+      {\textit{Bachelor of Electrical and Electronic Engineering}}{Sept.,2015 -- Jul.,2019}
+      \quad 
+      
+      {Major module:simiconductor and intergred circuit, signal and system, HDL}{\quad }
+    \CVSubheading
+      {Xian-Jiaotong Liverpool University/Liverpool University}{\textbf{Suzhou}}
+      {\textit{Master of Multimedia Telecommunications}}{Sept.,2019 -- Apr.,2021}
+      
+      {Major Module:deep learning and cv, image process, Cryptography}{\quad }
+  \CVSubHeadingListEnd
+
+  %-----Work experience----------------------------------------------------------
+\section{Work experience}
+  \CVSubHeadingListStart
+    \CVSubheading
+      {Johnson Controls}{\textbf{Shanghai}}
+      {\textit{Software engineer in test}}{Jun.,28\textsuperscript{th},2021 --  }
+      \CVItemListStart
+        \CVItem{Join in the TRIATEK project as test engineer}
+        \CVItem{Execute test cases to ensure product quality}
+        \CVItem{Update and maintain test cases in jira}
+        \CVItem{Research on automatic test and plan to achieve it in future test work}
+      \CVItemListEnd
+   \CVSubHeadingListEnd
+
+%-----Internship experience----------------------------------------------------------
+\section{Internship experience}
+  \CVSubHeadingListStart
+    \CVSubheading
+      {Xi'an SCHALTBAU}{\textbf{Xian}}
+      {\textit{Workshop Intern}}{Jul.,14\textsuperscript{th},2016 --  Jul.,21\textsuperscript{st},2016}
+      \CVItemListStart
+        \CVItem{Understand the step of producting driver controller and record material parameters}
+      \CVItemListEnd
+    \CVSubheading
+      {Suzhou STRYKER}{\textbf{Suzhou}}
+      {\textit{Source Intern}}{Aug.,20\textsuperscript{th},2018 --  Feb.,28\textsuperscript{th},2019}
+      \CVItemListStart
+        \CVItem{Use QAD software to assist in processing requests for approval}
+        \CVItem{Communicate delivery time and other details with foreign supplier}
+      \CVItemListEnd
+   \CVSubheading
+      {Suzhou Philips Healthcare}{\textbf{Suzhou}}
+      {\textit{Support Intern}}{Jul.,20\textsuperscript{th},2020 --  Oct.,20\textsuperscript{th},2020}
+      \CVItemListStart
+        \CVItem{Use SAP to help the engineers deal with errors in hours, work orders, contracts.}
+        \CVItem{Coordinate with warehouse and material departments to maintain and update material status}
+    \CVItemListEnd
+  \CVSubHeadingListEnd  
+  
+%-----Community activities----------------------------------------------------
+\section{Project and Community Activities}
+  \CVSubHeadingListStart
+%    \CVSubheading
+%      {Title of Work}{When it was done}
+%      {Institution you worked with}{unused}
+     \CVSubheading
+      {Superpixel preprocessing(SLIC algorithm) improves PANet performance}{\textbf{Suzhou}}
+      {\textit{Personal Final Master Project}}{Jul.,2020 -- Dec.,2020}
+      \CVItemListStart
+        \CVItem{Based on classical network PANet(prototype alignment network) for few shot semantic segmentation}
+        \CVItem{SLIC was applied on the PASCAL VOC dataset,which improved the performance(mIoU)}.
+        \CVItem{Applications: smart payment, VQA, entertainment fashion, autopilot, medical, smart agricultural, etc}
+        \CVItem{Prospect: It can continue increaseing the performance by promote the results closer to ground truth (mIoU =1)}
+    \CVItemListEnd
+  \CVSubHeadingListEnd
+
+%-----Skills----------------------------------------------------
+\section{Skills and Personal Statement}
+  \CVSubHeadingListStart
+    \CVSubheading
+      {Language Skill and Technical Skill}{}
+      {}{}
+      \vspace{-16pt}
+      \CVItemListStart
+        \CVItem{Language Skill:Engilsh(IELTS 6.5)}
+        \CVItem{Technical Skill:Pytorch,Matlab,adb,LaTeX}
+    \CVItemListEnd
+  \CVSubHeadingListEnd
+   \CVSubHeadingListStart
+    \CVSubheading
+      {Personal statement}{}
+      {}{}
+      \vspace{-16pt}
+      \CVItemListStart
+        \CVItem{Personality evaluation: outgoing, active, innovative}
+        \CVItem{advantages: good at English, good math foundation, have the coding and computer foundation}
+    \CVItemListEnd
+  \CVSubHeadingListEnd
+\end{document}
